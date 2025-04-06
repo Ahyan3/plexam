@@ -5,10 +5,14 @@ Welcome to Ryan Francis C. Romano - Programming Language 101 repository! This fo
 ## Folder Structure
 
 The folder is organized as follows:
-Premid
-Midterm
-Prefinal
-Final
+- Premid
+- Midterm
+- Prefinal
+- Final
+
+## Premid 
+## Premid Activities
+## Premid Exam
 
 ## Midterm 
 ## Midterm Activities
@@ -26,9 +30,15 @@ This folder contains the following activities, each demonstrating different prog
 
 Each activity folder contains the respective code files, explanations, and any additional resources needed to understand the topic.
 
-## Exam
+## Midterm Exam
 
 The **Exam** folder contains the assessment for the course. It includes the exam paper and any additional materials required to complete the exam.
+
+1. 11.15: Find the Second Largest Number in a List. Write a function to find the second largest number in a list.
+2. 16.25: Find the Most Frequent Element in a List. Given a list, return the element that appears the most times.
+3. 26-50: NumPy Challenge: Weather Data Analysis. Perform calculations on a dataset using NumPy. 
+
+
 
 ## Instructions
 
