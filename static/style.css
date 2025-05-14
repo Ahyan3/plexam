@@ -1,0 +1,151 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #3494e6, #ec6ead);
+}
+
+/* Dataset Section Styles */
+.dataset {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.dataset:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dataset h2 {
+    color: #2980b9;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Context Paragraph Styles */
+.dataset p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: justify;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Plot Container Styles */
+.plot-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    perspective: 1000px;
+}
+
+.plot-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.plot-image:hover {
+    transform: scale(1.02) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Error Styles */
+.error {
+    color: #e74c3c;
+    text-align: center;
+    background-color: #fff0f0;
+    border: 1px solid #ffd0d0;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .dataset {
+        padding: 15px;
+    }
+
+    .plot-image {
+        max-width: 100%;
+    }
+}
+
+/* Subtle Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dataset {
+    animation: fadeIn 0.7s ease-out;
+}

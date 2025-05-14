@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PL Prefinal Exam</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">	
+</head>
+<body>
+    <h1>PL Prefinal Exam: Dataset Visualizations</h1>
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+{% for label, data in info.items() %}
+    <div class="dataset">
+        <h2>{{ label }}</h2>
+        <p>{{ data.context }}</p>
+        {% if plots[label] %}
+            <div class="plot-container">
+                <img class="plot-image" src="{{ plots[label] }}" alt="Plot for {{ label }}">
+            </div>
+        {% else %}
+            <p style="color: gray;">No visualization available.</p>
+        {% endif %}
+    </div>
+{% endfor %}
+
+</body>
+</html>
